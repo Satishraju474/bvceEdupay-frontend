@@ -163,20 +163,20 @@ const AdminDashboard = () => {
                             {/* NEW: Dues Summary & Direct Actions */}
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 border-b border-gray-200">
                                 {/* College Fee Box */}
-                                <div className="bg-indigo-50 p-5 rounded-xl border border-indigo-100 flex justify-between items-center">
+                                <div className="bg-indigo-50 p-5 rounded-xl border border-indigo-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                     <div>
                                         <h4 className="text-sm font-bold text-indigo-900 uppercase tracking-wider">College Fee Due</h4>
                                         <p className="text-2xl font-bold text-indigo-700 mt-1">₹{searchedStudent.collegeFeeDue}</p>
                                     </div>
                                     {searchedStudent.collegeFeeDue > 0 ? (
-                                        <div className="flex space-x-2">
+                                        <div className="flex space-x-2 w-full sm:w-auto">
                                             <button
                                                 onClick={() => {
                                                     if (confirm('Are you sure you want to mark College Fee as PAID?')) {
                                                         handleUpdateStudentFees(searchedStudent.usn, { collegeFeeDue: 0 });
                                                     }
                                                 }}
-                                                className="px-3 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-700 text-sm font-bold flex items-center"
+                                                className="flex-1 sm:flex-none justify-center px-3 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-700 text-sm font-bold flex items-center"
                                             >
                                                 Mark Paid
                                             </button>
@@ -198,21 +198,21 @@ const AdminDashboard = () => {
                                 </div>
 
                                 {/* Transport Fee Box */}
-                                <div className="bg-orange-50 p-5 rounded-xl border border-orange-100 flex justify-between items-center">
+                                <div className="bg-orange-50 p-5 rounded-xl border border-orange-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                     <div>
                                         <h4 className="text-sm font-bold text-orange-900 uppercase tracking-wider">Transport Fee Due</h4>
                                         <p className="text-2xl font-bold text-orange-700 mt-1">₹{searchedStudent.transportFeeDue}</p>
                                         {searchedStudent.transportRoute && <p className="text-xs text-orange-600 mt-1 font-medium bg-orange-100 px-2 py-0.5 rounded inline-block">{searchedStudent.transportRoute}</p>}
                                     </div>
                                     {searchedStudent.transportFeeDue > 0 ? (
-                                        <div className="flex space-x-2">
+                                        <div className="flex space-x-2 w-full sm:w-auto">
                                             <button
                                                 onClick={() => {
                                                     if (confirm('Are you sure you want to mark Transport Fee as PAID?')) {
                                                         handleUpdateStudentFees(searchedStudent.usn, { transportFeeDue: 0 });
                                                     }
                                                 }}
-                                                className="px-3 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-700 text-sm font-bold flex items-center"
+                                                className="flex-1 sm:flex-none justify-center px-3 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-700 text-sm font-bold flex items-center"
                                             >
                                                 Mark Paid
                                             </button>
@@ -234,20 +234,20 @@ const AdminDashboard = () => {
                                 </div>
 
                                 {/* Hostel Fee Box */}
-                                <div className="bg-rose-50 p-5 rounded-xl border border-rose-100 flex justify-between items-center">
+                                <div className="bg-rose-50 p-5 rounded-xl border border-rose-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                     <div>
                                         <h4 className="text-sm font-bold text-rose-900 uppercase tracking-wider">Hostel Fee Due</h4>
                                         <p className="text-2xl font-bold text-rose-700 mt-1">₹{searchedStudent.hostelFeeDue}</p>
                                     </div>
                                     {searchedStudent.hostelFeeDue > 0 ? (
-                                        <div className="flex space-x-2">
+                                        <div className="flex space-x-2 w-full sm:w-auto">
                                             <button
                                                 onClick={() => {
                                                     if (confirm('Are you sure you want to mark Hostel Fee as PAID?')) {
                                                         handleUpdateStudentFees(searchedStudent.usn, { hostelFeeDue: 0 });
                                                     }
                                                 }}
-                                                className="px-3 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-700 text-sm font-bold flex items-center"
+                                                className="flex-1 sm:flex-none justify-center px-3 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-700 text-sm font-bold flex items-center"
                                             >
                                                 Mark Paid
                                             </button>
@@ -269,20 +269,20 @@ const AdminDashboard = () => {
                                 </div>
 
                                 {/* Placement Fee Box */}
-                                <div className="bg-blue-50 p-5 rounded-xl border border-blue-100 flex justify-between items-center">
+                                <div className="bg-blue-50 p-5 rounded-xl border border-blue-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                     <div>
                                         <h4 className="text-sm font-bold text-blue-900 uppercase tracking-wider">Placement Fee Due</h4>
                                         <p className="text-2xl font-bold text-blue-700 mt-1">₹{searchedStudent.placementFeeDue}</p>
                                     </div>
                                     {searchedStudent.placementFeeDue > 0 ? (
-                                        <div className="flex space-x-2">
+                                        <div className="flex space-x-2 w-full sm:w-auto">
                                             <button
                                                 onClick={() => {
                                                     if (confirm('Are you sure you want to mark Placement Fee as PAID?')) {
                                                         handleUpdateStudentFees(searchedStudent.usn, { placementFeeDue: 0 });
                                                     }
                                                 }}
-                                                className="px-3 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-700 text-sm font-bold flex items-center"
+                                                className="flex-1 sm:flex-none justify-center px-3 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-700 text-sm font-bold flex items-center"
                                             >
                                                 Mark Paid
                                             </button>

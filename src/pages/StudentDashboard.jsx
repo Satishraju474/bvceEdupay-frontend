@@ -210,7 +210,7 @@ const StudentDashboard = () => {
                         <div className="bg-white p-1 rounded-lg border border-gray-200 flex shadow-sm min-w-max">
                             <button
                                 onClick={() => setFeeTab('college')}
-                                className={`px-4 py-2 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'college'
+                                className={`px-4 py-3 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'college'
                                     ? 'bg-brand-600 text-white shadow-md'
                                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                                     }`}
@@ -220,7 +220,7 @@ const StudentDashboard = () => {
                             </button>
                             <button
                                 onClick={() => setFeeTab('transport')}
-                                className={`px-4 py-2 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'transport'
+                                className={`px-4 py-3 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'transport'
                                     ? 'bg-brand-600 text-white shadow-md'
                                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                                     }`}
@@ -230,7 +230,7 @@ const StudentDashboard = () => {
                             </button>
                             <button
                                 onClick={() => setFeeTab('library')}
-                                className={`px-4 py-2 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'library'
+                                className={`px-4 py-3 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'library'
                                     ? 'bg-brand-600 text-white shadow-md'
                                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                                     }`}
@@ -240,7 +240,7 @@ const StudentDashboard = () => {
                             </button>
                             <button
                                 onClick={() => setFeeTab('placement')}
-                                className={`px-4 py-2 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'placement'
+                                className={`px-4 py-3 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'placement'
                                     ? 'bg-brand-600 text-white shadow-md'
                                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                                     }`}
@@ -250,7 +250,7 @@ const StudentDashboard = () => {
                             </button>
                             <button
                                 onClick={() => setFeeTab('hostel')}
-                                className={`px-4 py-2 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'hostel'
+                                className={`px-4 py-3 rounded-md text-sm font-bold transition-all duration-200 flex items-center ${feeTab === 'hostel'
                                     ? 'bg-brand-600 text-white shadow-md'
                                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                                     }`}
@@ -363,7 +363,7 @@ const StudentDashboard = () => {
                                     <button
                                         key={year}
                                         onClick={() => setActiveFeeYear(year)}
-                                        className={`flex-1 py-1.5 text-xs font-bold rounded-md transition-all duration-200 uppercase tracking-wide ${activeFeeYear === year
+                                        className={`flex-1 py-2.5 text-xs font-bold rounded-md transition-all duration-200 uppercase tracking-wide ${activeFeeYear === year
                                             ? 'bg-white text-brand-700 shadow-sm ring-1 ring-black/5'
                                             : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
                                             }`}
