@@ -37,17 +37,17 @@ const Login = () => {
 
     return (
         <div className="min-h-screen bg-brand-50 flex items-center justify-center p-4 relative overflow-hidden">
-            {/* Background Decoration */}
-            <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-brand-900 to-brand-800 transform -skew-y-6 origin-top-left z-0"></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl z-0"></div>
+            {/* Background Decoration - Hidden on small mobile to prevent overflow issues */}
+            <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-brand-900 to-brand-800 transform -skew-y-6 origin-top-left z-0 hidden sm:block"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl z-0 hidden sm:block"></div>
 
-            <div className="bg-white p-10 rounded-xl shadow-2xl w-full max-w-md relative z-10 border border-gray-100">
-                <div className="text-center mb-8">
+            <div className="bg-white p-6 md:p-10 rounded-xl shadow-2xl w-full max-w-md relative z-10 border border-gray-100 mx-4 md:mx-0">
+                <div className="text-center mb-6 md:mb-8">
                     <div className="inline-flex p-3 rounded-full bg-brand-50 mb-4">
-                        <Lock className="h-8 w-8 text-brand-700" />
+                        <Lock className="h-6 w-6 md:h-8 md:w-8 text-brand-700" />
                     </div>
-                    <h2 className="text-3xl font-serif font-bold text-brand-900 tracking-tight">Student Portal</h2>
-                    <p className="text-gray-500 mt-2 text-sm font-medium">BVC Group of Institutions</p>
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-900 tracking-tight">Student Portal</h2>
+                    <p className="text-gray-500 mt-2 text-xs md:text-sm font-medium">BVC Group of Institutions</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
