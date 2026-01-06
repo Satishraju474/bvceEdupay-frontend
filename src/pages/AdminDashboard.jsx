@@ -386,7 +386,10 @@ const AdminDashboard = () => {
     };
 
     const handlePromote = async () => {
-        const eligible = classStudents.filter(s => (s.collegeFeeDue || 0) <= 0);
+        const eligible = classStudents.filter(s => {
+            const totalDue = (s.collegeFeeDue || 0) + (s.transportFeeDue || 0) + (s.hostelFeeDue || 0) + (s.placementFeeDue || 0);
+            return totalDue <= 0;
+        });
         if (eligible.length === 0) return toast.error('No eligible students found');
 
         if (!confirm(`Promote ${eligible.length} students?`)) return;
@@ -805,7 +808,8 @@ const AdminDashboard = () => {
                             </thead>
                             <tbody className="divide-y divide-gray-100">
                                 {classStudents.map(student => {
-                                    const isEligible = (student.collegeFeeDue || 0) <= 0;
+                                    const totalDue = (student.collegeFeeDue || 0) + (student.transportFeeDue || 0) + (student.hostelFeeDue || 0) + (student.placementFeeDue || 0);
+                                    const isEligible = totalDue <= 0;
                                     return (
                                         <tr key={student._id} className="hover:bg-gray-50/50">
                                             <td className="px-6 py-4 font-medium text-gray-900">{student.usn}</td>
