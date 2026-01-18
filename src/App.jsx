@@ -15,6 +15,7 @@ import PlacementDashboard from './pages/PlacementDashboard';
 import HostelDashboard from './pages/HostelDashboard';
 import AdmissionDashboard from './pages/AdmissionDashboard'; // Added
 import SpecialThanks from './pages/SpecialThanks';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 
 function AppContent() {
@@ -26,6 +27,7 @@ function AppContent() {
       {!isSpecialThanks && <Navbar />}
       <main className="flex-grow">
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
 
           {/* Student Routes */}
@@ -132,7 +134,7 @@ function AppContent() {
           <Route path="/special-thanks" element={<SpecialThanks />} />
 
           {/* Default Route */}
-          <Route path="/" element={<Navigate to="/login" replace />} />
+
         </Routes>
       </main>
       {!isSpecialThanks && <Footer />}
